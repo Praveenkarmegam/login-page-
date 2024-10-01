@@ -1,0 +1,97 @@
+/* General Page Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Background decorations */
+.background-decor {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+.container {
+    z-index: 2;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.5s;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Animated Input */
+.animated-input {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.animated-input:focus {
+    border-color: #9b59b6;
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);
+}
+
+/* Button Design */
+.btn-gradient {
+    background: linear-gradient(to right, #9b59b6, #71b7e6);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(to right, #71b7e6, #9b59b6);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box, .welcome-container {
+        padding: 20px;
+    }
+}
